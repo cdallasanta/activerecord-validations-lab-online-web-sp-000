@@ -7,4 +7,4 @@ end
 
 class TitleValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
-    unless value.split & [/Won't Believe/, /Secret/, /Guess/, /Top \d*/] 
+    unless value.split & [/Won't Believe/, /Secret/, /Guess/, /Top \d/] 
