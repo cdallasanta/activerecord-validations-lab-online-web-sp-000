@@ -7,4 +7,4 @@ end
 
 class TitleValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
-    unless value.include?()
+    unless value.include?(["Won't Believe", "Secret", "Top [number]", or "Guess"])
