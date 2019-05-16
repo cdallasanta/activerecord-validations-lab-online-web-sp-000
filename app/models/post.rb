@@ -2,6 +2,7 @@ class TitleValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
     click_baits = [/Won't Believe/, /Secret/, /Guess/, /Top \d/]
     unless click_baits.any?{|regex| value =~ regex}
+      binding.pry
       record.errors(attribute) << (options[:message] || "is not clickbait-y enough")
     end
   end
